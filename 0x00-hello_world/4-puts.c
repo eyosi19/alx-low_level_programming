@@ -5,7 +5,7 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)   // This is the return type (void means no value is computes)
+int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
 return (0);

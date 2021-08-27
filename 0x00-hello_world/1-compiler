@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -E 1-main.c
+g++ -c 1-main.c

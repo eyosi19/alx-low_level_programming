@@ -1,3 +1,2 @@
 #!/bin/bash
 gcc -S -masm=intel 100-main.c
-

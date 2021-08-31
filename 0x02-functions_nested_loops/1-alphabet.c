@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -7,6 +7,10 @@
  */
 int main(void)
 {
-printf_alphabet();
-return (0);
+char ch;
+for (ch = 'a'; ch <= 'z'; ch++)
+{
+  printf("%c", ch);
+}
+return 0;
 }

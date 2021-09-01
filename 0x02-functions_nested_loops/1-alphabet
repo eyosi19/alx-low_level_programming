@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc 1-alphabet.c && ./a.out
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 main.h 1-alphabet.c && ./a.out

@@ -6,14 +6,14 @@
  *
  * @s: the string that we want to calculate
  *
- * return: nothing
+ * return: 0
  */
 
 int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 	{
-		return;
+		return (0);
 	}
 	_strlen_recursion(s++);
 }

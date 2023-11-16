@@ -40,5 +40,5 @@ int natural_sqrt_recursion(int n, int x)
 	{
 		return (x);
 	}
-	return (natrual_sqrt_recursion(n, x + 1));
+	return (natural_sqrt_recursion(n, x + 1));
 }

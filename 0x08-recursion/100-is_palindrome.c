@@ -30,7 +30,7 @@ int is_palindrome(char *s)
 
 int _strlen_recursions(char *s)
 {
-	if (*s == '\n')
+	if (*s == '\0')
 	{
 		return (0);
 

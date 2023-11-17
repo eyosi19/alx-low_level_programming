@@ -3,6 +3,6 @@
 
 void _puts(char *s)
 {
-	return;
+	_putchar('A');
 }
 

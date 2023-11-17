@@ -23,7 +23,7 @@ int _atoi(char *s)
 	if (*s == '-' || *s == '+')
 	{
 		sign = (*s++ == '-') ? -1 : 1;
-		return (0);
+		return (1);
 	}
 
 	while (*s >= '0' && *s <= '9')

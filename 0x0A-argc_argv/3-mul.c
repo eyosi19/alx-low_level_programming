@@ -31,6 +31,7 @@ int _atoi(char *s)
 		s++;
 	}
 	return (sign * result);
+	return (0);
 }
 
 /**
@@ -55,9 +56,7 @@ int main(int argc, char *argv[])
 
 	x = _atoi(argv[1]);
 	y = _atoi(argv[2]);
-
 	sum = x * y;
-
 	printf("%d\n", sum);
 	return (0);
 }

@@ -12,8 +12,11 @@
 
 int atoi(char *s)
 {
-	int result = 0;
-	int sign = 1;
+	int result;
+	int sign;
+
+	result = 0;
+	sign = 1;
 
 	while (*s == ' ' || *s == '\t' || *s == '\n')
 		s++;

@@ -8,14 +8,14 @@
  *
  * @argv: arrays of arguments
  *
- * return: 0
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	for (int i = 0; i <= argc - 1; i++)
+	for (int i = 0; i <= argc; i++)
 	{
-		printf("%s\n", argv[i]);
+		printf("%s\n", *argv[i]);
 		return (0);
 	}
 }

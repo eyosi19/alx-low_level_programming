@@ -2,38 +2,6 @@
 #include "main.h"
 
 
-int atoi(char *s);
-
-/**
- * main - returns the result of two arguments multiply
- *
- * @argc: number of arguments
- *
- * @argv: arrays of arugments
- *
- * Return: 0
- */
-
-int main(int argc, char *argv[])
-{
-	int x, y, sum;
-
-	if (argc < 3 || argc > 3)
-	{
-		printf("Error.\n");
-		return (1);
-	}
-
-	x = atoi(argv[1]);
-	y = atoi(argv[2]);
-
-	sum = x * y;
-
-	printf("%d\n", sum);
-
-	return (0);
-}
-
 /**
  * atoi - change char to integer
  *
@@ -61,4 +29,33 @@ int atoi(char *s)
 		s++;
 	}
 	return (sign * result);
+}
+
+/**
+ * main - returns the result of two arguments multiply
+ *
+ * @argc: number of arguments
+ *
+ * @argv: arrays of arugments
+ *
+ * Return: 0
+ */
+
+int main(int argc, char *argv[])
+{
+	int x, y, sum;
+
+	if (argc < 3 || argc > 3)
+	{
+		printf("Error.\n");
+		return (1);
+	}
+
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
+
+	sum = x * y;
+
+	printf("%d\n", sum);
+	return (0);
 }

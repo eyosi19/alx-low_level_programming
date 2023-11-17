@@ -12,8 +12,7 @@
 
 int atoi(char *s)
 {
-	int result;
-	int sign;
+	int result, sign;
 
 	result = 0;
 	sign = 1;

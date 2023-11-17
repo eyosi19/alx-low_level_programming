@@ -30,6 +30,8 @@ int main(int argc, char *argv[])
 	sum = x * y;
 
 	printf("%d\n", sum);
+
+	return (0);
 }
 
 /**

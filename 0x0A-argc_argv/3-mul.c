@@ -3,14 +3,14 @@
 
 
 /**
- * atoi - change char to integer
+ * _atoi - change char to integer
  *
  * @s: the input
  *
  * Return: the result of the interger
  */
 
-int atoi(char *s)
+int _atoi(char *s)
 {
 	int result, sign;
 
@@ -53,8 +53,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	x = atoi(argv[1]);
-	y = atoi(argv[2]);
+	x = _atoi(argv[1]);
+	y = _atoi(argv[2]);
 
 	sum = x * y;
 

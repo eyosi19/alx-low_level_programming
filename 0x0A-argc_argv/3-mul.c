@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
 	sum = x * y;
 
-	printf("%i\n", sum);
+	printf("%d\n", sum);
 }
 
 /**

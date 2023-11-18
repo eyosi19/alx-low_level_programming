@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
 	}
 
 	int coins[] = {25, 10, 5, 2, 1};
+
 	numCoins = sizeof(coins) / sizeof(coins[0]);
 	count = 0;
 
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
 			count++;
 		}
 	}
-	
+
 	printf("%d\n", count);
 	return (0);
 }

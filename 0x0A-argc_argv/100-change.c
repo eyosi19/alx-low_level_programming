@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
 			count++;
 		}
 	}
+	
 	printf("%d\n", count);
 	return (0);
 }

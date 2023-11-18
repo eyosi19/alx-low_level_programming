@@ -1,53 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 #include "main.h"
 
 /**
- * _atoi - returns string to integer
+ * main - returns the addition of to arg
  *
- * @s: the string
+ * @argc: number of arg
  *
- * Return: the result
- */
-
-
-int _atoi(char *s)
-{
-	int result = 0;
-	int sign = 1;
-
-	while (*s == ' ' || *s == '\t' || *s == '\n')
-		s++;
-	if (*s == '-' || *s == '+')
-	{
-		sign = (*s++ == '-') ? -1 : 1;
-	}
-	while (*s >= '0' && *s <= '9')
-	{
-		result = result * 10 + (*s - '0');
-		s++;
-	}
-	return (sign * result);
-}
-
-/**
- * _isdigit - check if its digit
- *
- * @c: char
- *
- * Return: if its digit or not
- */
-
-int _isdigit(char c)
-{
-	return ((c >= '0' && c <= '9') ? 1 : 0);
-}
-
-/**
- * main - returns the addition of arguments
- *
- * @argc: number of arguments
- *
- * @argv: arrays of arguments
+ * @argv: arrays of arg
  *
  * Return: 0
  */
@@ -59,23 +20,27 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
+	int sum = 0;
 
-	int sum, i, j;
-
-	sum = 0;
-
-	for (i = 1; i < argc; i++)
+	for (int i = 1; i < argc; i++)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		for (int j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (!_isdigit(argv[i][j]))
+			if (!isdigit(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
 
-		sum += _atoi(argv[i]);
+		int currentNumber = atoi(argv[i]);
+
+		if (currentNumber <= 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		sum += currentNumber;
 	}
 	printf("%d\n", sum);
 	return (0);

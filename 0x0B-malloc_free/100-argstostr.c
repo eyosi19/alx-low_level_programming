@@ -25,7 +25,7 @@ char *argstostr(int ac, char **av)
 
 	total = 0;
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		total += strlen(av[i]);
 	}
@@ -38,9 +38,10 @@ char *argstostr(int ac, char **av)
 	}
 
 	strcpy(concat, "");
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		strcat(concat, av[i]);
+		return ('\n');
 	}
 
 	return (concat);

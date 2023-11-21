@@ -12,45 +12,45 @@
 
 char **strtow(char *str)
 {
-	int i, n, j;
+	int i, n, j, start, length;
 	char *p;
 	char **s;
 
-	n = strlen(str);
+	n = strlen(str), wordCount = 0;
 
 	if (str == NULL || str[0] == '\0')
-	{
 		return (NULL);
-	}
+
 	s = malloc(n * sizeof(char *));
 	if (s == NULL)
-	{
 		return (NULL);
-	}
-	p = malloc(n + 1 * sizeof(char));
-	if (p == NULL)
-	{
-		free(s);
-		return (NULL);
-	}
-	strcpy(p, str);
 	for (i = 0; i < n; i++)
 	{
-		s[i] = malloc((strlen(p) + 1) * sizeof(char));
-		if (s[i] == NULL)
+		while (i < n && str[i] == ' ')
+			i++;
+
+		if (i < n)
 		{
-			for (j = 0; j < i; j++)
+			start = i;
+			while (i < n && str[i] != ' ')
+				i++;
+
+			length = i - start;
+			s[wordCount] = malloc((length + 1) * size(char));
+			if (s[wordCount] == NULL)
 			{
-				free(s[j]);
+				for (j = 0; j < wordCount; j++)
+				{
+					free(s[j]);
+				}
+				free(s);
+				return (NULL);
 			}
-			free(s);
-			free(p);
-			return (NULL);
+			strncpy(s[wordCount], str + start, length);
+			s[wordCount++][length] = '\0';
 		}
-		strcpy(s[i], p);
-		strcat(s[i], " ");
 	}
-	free(p);
+	s[wordCount] = NULL;
 	return (s);
 }
 

@@ -38,19 +38,11 @@ char *str_concat(char *s1, char *s2)
 
 	if (p2 == NULL)
 	{
-		free(p1);
 		return (NULL);
 	}
 
 	strcpy(p1, s1);
 	strcpy(p2, s2);
-
-	concat = malloc(strlen(p1) + strlen(p2) + 1 * sizeof(char));
-
-	if (concat == NULL)
-	{
-		return (NULL);
-	}
 
 	strcpy(concat, p1);
 	strcat(concat, p2);

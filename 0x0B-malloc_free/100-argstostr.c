@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 		total += strlen(av[i]) + 1;
 	}
 
-	concat = malloc(total * sizeof(char));
+	concat = malloc(total + 1 * sizeof(char));
 
 	if (concat == NULL)
 	{
@@ -40,7 +40,7 @@ char *argstostr(int ac, char **av)
 	strcpy(concat, "");
 	for (i = 0; i < ac; i++)
 	{
-		strcat(concat, strdup(av[i]));
+		strcat(concat, av[i]);
 		strcat(concat, "\n");
 	}
 

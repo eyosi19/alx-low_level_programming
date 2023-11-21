@@ -20,7 +20,12 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL || s2 == NULL)
 	{
-		return ("");
+		char *empty = malloc(1 * sizeof(char));
+		if (empty != NULL)
+		{
+			empty[0] = '\0';
+		}
+		return empty;
 	}
 
 	p1 = malloc(strlen(s1) + 1 * sizeof(char));

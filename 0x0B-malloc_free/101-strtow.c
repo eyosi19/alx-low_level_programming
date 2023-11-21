@@ -12,8 +12,7 @@
 
 char **strtow(char *str)
 {
-	int i, n, j, start, length;
-	char *p;
+	int i, n, j, start, length, wordCount;
 	char **s;
 
 	n = strlen(str), wordCount = 0;

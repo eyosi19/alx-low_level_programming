@@ -10,12 +10,10 @@
  * Return: the string to word
  */
 
-char **strtow(char *str);
+char **strtow(char *str)
 {
-	int i;
-	int n;
+	int i, n, j;
 	char *p;
-	int j;
 	char **s;
 
 	n = strlen(str);
@@ -24,23 +22,18 @@ char **strtow(char *str);
 	{
 		return (NULL);
 	}
-
 	s = malloc(n * sizeof(char *));
 	if (s == NULL)
 	{
 		return (NULL);
 	}
-
 	p = malloc(n + 1 * sizeof(char));
-
 	if (p == NULL)
 	{
 		free(s);
 		return (NULL);
 	}
-
 	strcpy(p, str);
-
 	for (i = 0; i < n; i++)
 	{
 		s[i] = malloc((strlen(p) + 1) * sizeof(char));
@@ -54,12 +47,10 @@ char **strtow(char *str);
 			free(p);
 			return (NULL);
 		}
-
 		strcpy(s[i], p);
 		strcat(s[i], " ");
 	}
 	free(p);
-
 	return (s);
 }
 

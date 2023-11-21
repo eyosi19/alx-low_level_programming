@@ -35,7 +35,7 @@ char **strtow(char *str)
 				i++;
 
 			length = i - start;
-			s[wordCount] = malloc((length + 1) * size(char));
+			s[wordCount] = malloc((length + 1) * sizeof(char));
 			if (s[wordCount] == NULL)
 			{
 				for (j = 0; j < wordCount; j++)

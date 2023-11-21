@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		total += strlen(av[i]);
+		total += strlen(av[i]) + 1;
 	}
 
 	concat = malloc(total + 1 * sizeof(char));
@@ -40,7 +40,7 @@ char *argstostr(int ac, char **av)
 	strcpy(concat, "");
 	for (i = 0; i < ac; i++)
 	{
-		strcat(concat, av[i]);
+		strcat(concat, strdup(av[i]));
 		strcat(concat, "\n");
 	}
 

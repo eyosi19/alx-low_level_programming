@@ -18,14 +18,13 @@ char *str_concat(char *s1, char *s2)
 	char *p2;
 	char *concat;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
-		char *empty = malloc(1 * sizeof(char));
-		if (empty != NULL)
-		{
-			empty[0] = '\0';
-		}
-		return empty;
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
 	}
 
 	p1 = malloc(strlen(s1) + 1 * sizeof(char));
@@ -39,8 +38,8 @@ char *str_concat(char *s1, char *s2)
 
 	if (p2 == NULL)
 	{
-		return (NULL);
 		free(p1);
+		return (NULL);
 	}
 
 	strcpy(p1, s1);

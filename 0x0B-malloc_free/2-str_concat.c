@@ -18,8 +18,6 @@ char *str_concat(char *s1, char *s2)
 	char *p2;
 	char *concat;
 
-	concat = "";
-
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -28,27 +26,29 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-
 	p1 = malloc(strlen(s1) + 1 * sizeof(char));
-
 	if (p1 == NULL)
 	{
 		return (NULL);
 	}
-
 	p2 = malloc(strlen(s2) + 1 * sizeof(char));
-
 	if (p2 == NULL)
 	{
+		free(p1);
 		return (NULL);
 	}
-
 	strcpy(p1, s1);
 	strcpy(p2, s2);
-
+	concat = malloc(strlen(p1) + strlen(p2) + 1 * sizeof(char));
+	if (concat == NULL)
+	{
+		free(p1);
+		free(p2);
+		return (NULL);
+	}
 	strcpy(concat, p1);
 	strcat(concat, p2);
-
-
+	free(p1);
+	free(p2);
 	return (concat);
 }

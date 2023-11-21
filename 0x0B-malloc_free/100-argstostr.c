@@ -37,10 +37,11 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	strcpy(concat, '\n');
+	strcpy(concat, "");
 	for (i = 0; i < ac; i++)
 	{
 		strcat(concat, av[i]);
+		strcat(concat, "\n");
 	}
 
 	return (concat);

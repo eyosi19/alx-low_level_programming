@@ -17,7 +17,7 @@ char **strtow(char *str)
 
 	n = strlen(str), wordCount = 0;
 
-	if (str == NULL || str[0] == '\0')
+	if (str == NULL || str[0] == '\0' || str == " ")
 		return (NULL);
 
 	s = malloc(n * sizeof(char *));

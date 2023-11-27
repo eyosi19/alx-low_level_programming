@@ -1,6 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "dog.h"
+
 /**
  * new_dog - the new dog
  *
@@ -15,7 +16,8 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newDog = malloc(sizeof(struct dog));
+	dog_t *newDog;
+	newDog = malloc(sizeof(struct dog));
 
 	if (newDog != NULL)
 	{

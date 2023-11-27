@@ -1,5 +1,6 @@
+#include <string.h>
 #include <stdlib.h>
-
+#include "dog.h"
 /**
  * new_dog - the new dog
  *

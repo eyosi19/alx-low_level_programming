@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+/**
+ * print_dog - print the struct dog
+ *
+ * @d: is the pointer d
+ *
+ * Return: void
+ */
+
 void print_dog(struct dog *d)
 {
 	if (d)

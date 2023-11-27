@@ -4,13 +4,13 @@
 /**
  * init_dog - init struct dog
  *
- * @d: d
+ * @d: the pointer d
  *
- * @name: name
+ * @name: the struct name
  *
- * @age: age
+ * @age: the struct age
  *
- * @owner: owner
+ * @owner: the struct owner
  *
  * Return: nothing
  */

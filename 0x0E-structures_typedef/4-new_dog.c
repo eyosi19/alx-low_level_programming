@@ -1,4 +1,3 @@
-#include <string.h>
 #include <stdlib.h>
 #include "dog.h"
 
@@ -30,7 +29,7 @@ int _strlen(char *s)
  * Return: pointer
  */
 
-char *_strcpy(char *dest, *char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int i;
 
@@ -39,6 +38,8 @@ char *_strcpy(char *dest, *char *src)
 		dest[i] = src[i];
 	}
 	dest[i] = '\0';
+
+	return (dest);
 }
 
 
@@ -68,10 +69,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	newDog->name = malloc(sizeof(char) * (_strlen(name) + 1));
 	if (!newDog->name)
 	{
-		free(new_dog);
+		free(newDog);
 		return (NULL);
 	}
-	newDog->name = _strcpy(new_dog->name, name);
+	newDog->name = _strcpy(newDog->name, name);
 
 	newDog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 	if (!newDog->owner)
@@ -80,7 +81,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(newDog);
 		return (NULL);
 	}
-	newDog->owner = _strcpy(newDpg->owner, owner);
+	newDog->owner = _strcpy(newDog->owner, owner);
 
 	newDog->age = age;
 

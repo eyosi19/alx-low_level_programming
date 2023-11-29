@@ -1,6 +1,10 @@
 #ifndef __CAL_H__
 #define __CAL_H__
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /**
  * struct op - struct op
  *

@@ -8,9 +8,10 @@
  *
  * Return: 0;
  */
+
 void print_normal(char *name)
 {
-	printf("%s\n", name);
+	printf("%s", name);
 }
 
 /**

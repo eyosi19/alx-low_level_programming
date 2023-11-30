@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
+#include <stdio.h>
 
 /**
  * print_all - print all format
@@ -47,7 +48,7 @@ void print_all(const char * const format, ...)
 				continue;
 		}
 		separator = ", ";
-		i++
+		i++;
 	}
 	printf("\n");
 	va_end(args);

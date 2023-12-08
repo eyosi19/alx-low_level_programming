@@ -5,7 +5,7 @@
  *
  * @h: the pointer to the list_t
  *
- * Return: the number of the string
+ * Return: the number of the strings
  */
 
 size_t print_list(const list_t *h)

@@ -3,14 +3,14 @@
 #include "lists.h"
 
 /**
- * list_len - list the length of the single link list
+ * list_len - the number of the elements of a list
  *
- * @h: pointer to the structure
+ * @h: the linked list
  *
- * Return: the number of the single link list
+ * Return: the number of element of a single list
  */
 
-size_t list_len(const list_h *h)
+size_t list_len(const list_t *h)
 {
 	size_t c = 0;
 
@@ -22,3 +22,4 @@ size_t list_len(const list_h *h)
 
 	return (c);
 }
+

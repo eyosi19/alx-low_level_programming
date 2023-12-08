@@ -10,7 +10,7 @@
  * Return: the address
  */
 
-list_t *add_node_end(list_t **head, const char *str);
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *t, *new_node;
 	size_t n;
@@ -29,8 +29,9 @@ list_t *add_node_end(list_t **head, const char *str);
 
 	new_node->len = n;
 	new_node->next = NULL;
+	t = *head;
 
-	if (*head == 0)
+	if (t == NULL)
 	{
 		*head = new_node;
 	}

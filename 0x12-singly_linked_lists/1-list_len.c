@@ -5,7 +5,7 @@
 /**
  * list_len - list the length of the single link list
  *
- * @h: pointer to the struct
+ * @h: pointer to the structure
  *
  * Return: the number of the single link list
  */

@@ -13,7 +13,7 @@ size_t print_list(const list_t *h)
 	size_t n;
 
 	n = 0;
-	while (*h)
+	while (h)
 	{
 		if (h->str == NULL)
 		{

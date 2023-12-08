@@ -12,9 +12,7 @@
 
 size_t list_len(const list_h *h)
 {
-	size_t n;
-
-	n = 0;
+	size_t n = 0;
 
 	while (h)
 	{

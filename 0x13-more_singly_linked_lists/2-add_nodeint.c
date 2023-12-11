@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * add_nodeint - add a new integer to the list
@@ -11,7 +11,7 @@
 
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	list_t *t;
+	listint_t *t;
 	
 	t = malloc(sizeof(listint_t));
 

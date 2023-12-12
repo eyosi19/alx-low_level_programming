@@ -13,7 +13,7 @@
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *current, *prev;
-	unsigned int i;
+	unsigned int i = 0;
 
 	current = *head;
 	prev = NULL;

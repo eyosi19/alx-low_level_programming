@@ -8,7 +8,7 @@
  * Return: data of the deleted data node
  */
 
-int pop_listint(lintint_t **head)
+int pop_listint(listint_t **head)
 {
 	int data;
 	listint_t *temp;

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * unsigned int binary_to_uint - convert binary to decimal
+ * binary_to_uint - convert binary to decimal
  *
  * @b: the 0 and 1's
  *

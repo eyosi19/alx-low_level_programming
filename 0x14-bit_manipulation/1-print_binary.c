@@ -1,47 +1,34 @@
 #include "main.h"
 
 /**
- * print_binary - convert the binary representation of a number
+ * print_binary - print the binary of the given unsigned int
  *
  * @n: the number to convert
  *
- * Return: the binary
+ * Return: void
  */
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int i = 1, a;
+	int i, c = 0;
+	unsigned long int curr;
 
-	if (n == 0)
-		_putchar('0');
-
-	while (i <= n)
-		i *= 2;
-	i >>= 1;
-
-	while (n > 0)
+	for (i = 63; i >= 0; i--)
 	{
-		if (n > i)
+		curr = n >> i;
+
+		if (curr & 1)
 		{
 			_putchar('1');
-			n -= i;
-			i >>= 1;
+			c++;
 		}
-		else if (n == i)
-		{
-			_putchar('1');
-			a = (i >> 1);
-			if (a > 0)
-			{
-				for (i = a; i > 0; i >>= 1)
-					_putchar('0');
-			}
-			break;
-		}
-		else
+		else if (c)
 		{
 			_putchar('0');
-			i >>= 1;
 		}
+	}
+	if (!curr)
+	{
+		_putchar('0');
 	}
 }

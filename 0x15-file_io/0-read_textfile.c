@@ -13,9 +13,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer;
-	ssize_t bitR;
-	ssize_t bitW;
-	ssize_t fd;
+	ssize_t br, bw, fd;
 
 	if (filename == NULL)
 		return (0);
@@ -28,10 +26,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	fd = open(filename, O_RDONLY);
-	bitR = read(fd, buffer, letters);
-	bitW = write(STDOUT_FILENO, buffer, bitR);
+	br = read(fd, buffer, letters);
+	bw = write(STDOUT_FILENO, buffer, br);
 
-	if (fd == -1 || bitR == -1 || bitW == -1 || bitW != bitR)
+	if (fd == -1 || br == -1 || bw == -1 || bw != br)
 	{
 		free(buffer);
 		return (0);
@@ -40,5 +38,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	free(buffer);
 	close(fd);
 
-	return (bitW);
+	return (bw);
 }

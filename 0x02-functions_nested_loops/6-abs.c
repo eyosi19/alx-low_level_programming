@@ -3,6 +3,8 @@
 /**
  * _abs - the absolute value an integer
  *
+ * @n: the number
+ *
  * Return: the absolute value
  */
 

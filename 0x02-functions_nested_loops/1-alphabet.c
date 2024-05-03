@@ -1,18 +1,22 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * main - check the code for Holberton School students.
+ * print_alphabet - print the alphabets from a - z lowercase
  *
- * Return: Always 0.
+ * Return: from a - z
  */
 
-int main(void)
+void print_alphabet(void)
 {
-char ch;
-for (ch = 'a'; ch <= 'z'; ch++)
-{
-printf("%c", ch);
-}
-return 0;
+	char c;
+
+	c = 'a';
+
+	while (c <= 'z')
+	{
+		putchar(c);
+		c++;
+	}
+	putchar('\n');
+	return (c);
 }

@@ -16,7 +16,7 @@ int _islower(int c)
 	{
 		if (c == o)
 		{
-			return (1);
+			return (0);
 		}
 		else
 		{

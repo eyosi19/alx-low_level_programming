@@ -10,18 +10,5 @@
 
 int _islower(int c)
 {
-	char o;
-
-	for (o = 46; 0 <= 57; o++)
-	{
-		if (c == o)
-		{
-			return (0);
-		}
-		else
-		{
-			return (1);
-		}
-		o++;
-	}
+	return (c >= 'a' && c <= 'z');
 }

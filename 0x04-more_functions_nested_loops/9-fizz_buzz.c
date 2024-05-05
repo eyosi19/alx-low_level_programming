@@ -2,12 +2,13 @@
 
 /**
  * main - the main function
+ *
+ * Return: return 0
  */
 
-void main(void)
+int main(void)
 {
 	int i;
-	char* str;
 
 	for (i = 1; i <= 100; i++)
 	{
@@ -29,4 +30,6 @@ void main(void)
 		}
 	}
 	printf("\n");
+
+	return (0);
 }

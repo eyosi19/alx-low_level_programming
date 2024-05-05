@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * _isupper - return 1 if c is uppercase otherwise 0

@@ -1,3 +1,4 @@
+
 #include "main.h"
 
 /**
@@ -17,9 +18,12 @@ void puts2(char *str)
 		len++;
 	}
 
-	for (i = (i % 2 == 0); i < len; i++)
+	for (i = 0; i < len; i++)
 	{
-		_putchar(str[i]);
+		if (i % 2 == 0)
+		{
+			_putchar(str[i]);
+		}
 	}
 	_putchar('\n');
 }

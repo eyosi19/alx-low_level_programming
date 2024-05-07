@@ -10,9 +10,20 @@
 
 int _strlen(char *s)
 {
-	if (*s != '0')
+	int len;
+	int c;
+
+	len = sizeof(*s);
+
+	for (i = 0; i < len; i++)
 	{
-		return (sizeof(char) / sizeof(*s));
+		c = 0;
+
+		if (*s == '\0')
+		{
+			return (0);
+		}
+		c++;
 	}
 	return (0);
 }

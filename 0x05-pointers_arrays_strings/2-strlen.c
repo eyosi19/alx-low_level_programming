@@ -10,8 +10,7 @@
 
 int _strlen(char *s)
 {
-	int len;
-	int c;
+	int len, c, i;
 
 	len = sizeof(*s);
 

@@ -7,7 +7,7 @@
  *
  * @src: the source
  *
- * @m: the n bit that will concat
+ * @n: the n bit that will concat
  *
  * Return: dest
  */

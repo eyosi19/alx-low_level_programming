@@ -3,6 +3,8 @@
 /**
  * string_toupper - change the string to upper
  *
+ * @str: the string
+ *
  * Return: the string with upper case
  */
 

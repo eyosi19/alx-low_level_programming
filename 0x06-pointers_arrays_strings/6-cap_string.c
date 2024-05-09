@@ -1,5 +1,4 @@
-#include "main.c"
-#include <ctype.h>
+#include "main.h"
 /**
  * cap_string - capitalizes all the word
  *
@@ -8,19 +7,31 @@
  * Return: the cap_string
  */
 
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int i, cap;
-
-	cap = 1;
-
-	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (isalpha(str[i]) && cap)
-		{
-			str[i] = toupper(str[i]);
-			cap = 0;
-		}
-	}
-	return (str);
+    int i = 0, j;
+    char sepr[] = " ,;.!?\"()\t{}\n";
+
+    if (s[0] >= 'a' && s[0] <= 'z')
+        s[0] -= 32;
+
+    while (s[i])
+    {
+        j = 0;
+
+        while (sepr[j])
+        {
+            if (s[i] == sepr[j])
+            {
+                if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+                    s[i + 1] -= 32;
+                break;
+            }
+            j++;
+        }
+        i++;
+    }
+    return (s);
+}
 }

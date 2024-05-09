@@ -21,8 +21,8 @@ char *leet(char *s)
 			if (s[i] == letters[j])
 			{
 				s[i] = replace[j];
+				break;
 			}
-			break;
 		}
 	}
 

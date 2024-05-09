@@ -1,5 +1,5 @@
 #include "main.h"
-/**
+i/**
  * cap_string - capitalizes all the word
  *
  * @s: the string
@@ -10,10 +10,9 @@
 char *cap_string(char *s)
 {
 	int i, j;
-	char sepr[];
+	char sepr[] = " ,;.!?\"()\t{}\n";
 
 	i = 0;
-	sepr[] = " ,;.!?\"()\t{}\n";
 
 	if (s[0] >= 'a' && s[0] <= 'z')
 		s[0] -= 32;

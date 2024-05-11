@@ -22,7 +22,7 @@ void print_diagsums(int *a, int size)
 
 	for (i = size - 1; i >= 0; i--)
 	{
-		s2 += a[i * size + (size - y - 1)];
+		s2 += a[i * size + (size - i - 1)];
 	}
 	printf("%d, %d\n", s1, s2);
 

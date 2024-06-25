@@ -12,21 +12,27 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int result = 0;
 
-	if ((*b != '0' && *b != '1') && b == NULL)
+	if (b == NULL)
 		printf("0");
-
-	while (*b)
+	if (*b == '0' && *b == '1')
 	{
-		if (*b == '1')
+		while (*b)
 		{
-			result = result << 1;
-			result += 1;
+			if (*b == '1')
+			{
+				result = result << 1;
+				result += 1;
+			}
+			else
+			{
+				result = result << 1;
+			}
+			b++;
 		}
-		else
-		{
-			result = result << 1;
-		}
-		b++;
+	}
+	else
+	{
+		printf("0");
 	}
 	return (result);
 }

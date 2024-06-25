@@ -13,26 +13,26 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int result = 0;
 
 	if (b == NULL)
-		printf("0");
-	if (*b == '0' && *b == '1')
 	{
-		while (*b)
-		{
-			if (*b == '1')
-			{
-				result = result << 1;
-				result += 1;
-			}
-			else
-			{
-				result = result << 1;
-			}
-			b++;
-		}
+		printf("0");
 	}
-	else
+
+	while (*b)
 	{
-		printf("0");
+		if (*b == '1')
+		{
+			result = result << 1;
+			result += 1;
+		}
+		else if (*b == '0')
+		{
+			result = result << 1;
+		}
+		else
+		{
+			printf("0");
+		}
+		b++;
 	}
 	return (result);
 }

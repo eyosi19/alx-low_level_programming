@@ -1,1 +1,1 @@
-This is bit manipulation
+This is bit manipulation in C

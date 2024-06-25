@@ -24,6 +24,6 @@ void print_binary(unsigned long int n)
 		}
 	}
 
-	if(!found)
+	if (!found)
 		printf("0");
 }

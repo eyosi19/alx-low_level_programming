@@ -1,42 +1,52 @@
 #include "main.h"
 
+
 /**
- * read_textfile - read the text from the file
+ * read_textfile - read the given letter from a file
  *
  * @filename: the filename
  *
- * @letters: the letter of the mode
+ * @letters: the letters that will be read and print
  *
- * Return: to the stdout
+ * Return: the read one
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	FILE *fp;
 	char *buffer;
-	ssize_t bR, bW, fd;
+	ssize_t br;
 
 	if (filename == NULL)
-		return (0);
-
-	buffer = malloc(sizeof(char) * letters);
-
-	if (buffer == NULL)
 	{
 		return (0);
 	}
 
-	fd = open(filename, O_RDONLY);
-	bR = read(fd, buffer, letters);
-	bW = write(STDOUT_FILENO, buffer, bR);
+	fp = fopen(filename, "r");
+	if (fp == NULL)
+	{
+		return (0);
+	}
 
-	if (fd == -1 || bR == -1 || bW == -1 || bW != bR)
+	buffer = (char *)malloc(sizeof(char) * (letters + 1));
+
+	if (buffer == NULL)
+	{
+		fclose(fp);
+		return (0);
+	}
+
+	br = fread(buffer, sizeof(char), letters, file);
+
+	if (br == 0 && ferror(fp))
 	{
 		free(buffer);
+		fclose(fp);
 		return (0);
 	}
 
 	free(buffer);
-	close(fd);
+	fclose(fp);
 
-	return (bW);
+	return (br);
 }

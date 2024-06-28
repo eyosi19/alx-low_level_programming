@@ -36,7 +36,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	br = fread(buffer, sizeof(char), letters, file);
+	br = fread(buffer, sizeof(char), letters, fp);
 
 	if (br == 0 && ferror(fp))
 	{

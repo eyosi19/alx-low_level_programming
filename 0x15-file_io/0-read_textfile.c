@@ -12,21 +12,29 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	size_t i;
-	int ch;
 	FILE *fptr;
+	char *buffer;
+	ssize_t read_char;
 
 	fptr = fopen(filename, "r");
 
-	if (fptr == NULL && filename == NULL)
+	if (fptr == NULL)
 	{
 		return (0);
 	}
 
-	for (i = 0; i <= letters; i++)
+	buffer = (char *)malloc(letters);
+	if (buffer == NULL)
 	{
-		ch = fgetc(fptr);
+		fclose(fptr);
+		return (0);
 	}
 
-	return (ch);
+	read_chars = fread(buffer, 1, letter, fptr);
+
+	fwrite(buffer, 1, read_chars, stdout);
+
+	fclose(fptr);
+
+	return (read_chars);
 }

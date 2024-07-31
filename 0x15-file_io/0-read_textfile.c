@@ -30,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	read_chars = fread(buffer, 1, letter, fptr);
+	read_chars = fread(buffer, 1, letters, fptr);
 
 	fwrite(buffer, 1, read_chars, stdout);
 

@@ -35,7 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	written_chars = fwrite(buffer, 1, read_chars, stdout);
 	if (written_chars != read_chars)
 	{
-		written_chars = fwrite(buffer, 1, letters, fptr);
+		written_chars = fwrite(buffer, 1, re0ad_chars, stderr);
 		fclose(fptr);
 		return (0);
 	}

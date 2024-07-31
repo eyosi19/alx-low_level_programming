@@ -1,52 +1,31 @@
 #include "main.h"
 
-
 /**
- * read_textfile - read the given letter from a file
+ * read_textfile - reads a text file and prints it to STDOUT
  *
- * @filename: the filename
+ * @filename: the file that will be read
  *
- * @letters: the letters that will be read and print
+ * @letters: the number of letters it should read and print
  *
- * Return: the read one
+ * Return: the letters that is read
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fp;
-	char *buffer;
-	ssize_t br;
+	int i, ch;
+	FILE *fptr;
 
-	if (filename == NULL)
+	fptr = fopen(filename, "r");
+
+	if (fptr == NULL && filename == NULL)
 	{
 		return (0);
 	}
 
-	fp = fopen(filename, "r");
-	if (fp == NULL)
+	for (i = 0; i <= letters; i++)
 	{
-		return (0);
+		ch = fgetc(fptr);
 	}
 
-	buffer = (char *)malloc(sizeof(char) * (letters + 1));
-
-	if (buffer == NULL)
-	{
-		fclose(fp);
-		return (0);
-	}
-
-	br = fread(buffer, sizeof(char), letters, fp);
-
-	if (br == 0 && ferror(fp))
-	{
-		free(buffer);
-		fclose(fp);
-		return (0);
-	}
-
-	free(buffer);
-	fclose(fp);
-
-	return (br);
+	return (ch);
 }
